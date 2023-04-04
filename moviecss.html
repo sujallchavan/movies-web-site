@@ -1,0 +1,334 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>movie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="moviecsss.css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <script>
+
+function validateForm() {
+  let x = document.forms["myForm"]["email"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+<script>
+ function unn(){
+ alert("currently unavalable");
+ }
+</script>
+<script>
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+setTimeout(function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+},6000);
+
+</script>
+<script>
+function ll(){
+alert("plese login")
+}
+</script>
+<script>
+function pl(){
+alert("click here to login")
+}
+</script>
+<script>
+function onfunction() {
+  var x = document.getElementById("demo");
+  x.style.color = "red";
+}
+</script>
+
+</head>
+<body onload="checkCookie()">
+<header>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><b class="mo">movie</b></a>
+    </div>
+	<ul class="nav navbar-nav navbar-center navbar-collapse">
+	     <li class="se"><a href="#car"><input type="text" name="search" placeholder="Search.." class="sea"></a></li>
+		 </ul>
+     <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="#cars"><input type="button" data-toggle="modal" data-target="#myModal" value="login"class="button"></a></li>
+		  
+  
+		<li><a href="#tour"><input type="button" data-toggle="modal" data-target="#myModal1" value="singin"class="button"></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<!-- Modal -->
+     <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">login</h4>
+        </div>
+        <div class="modal-body">
+         <center> <p>login for prime</p></center>
+		  <form name="myform" onsubmit="validate()">
+		  <center>
+		  <input type="email" placeholder="email" name="fname" id="email" class="input1" required><br>
+		  <input type="password" placeholder="password" class="input1" required><br>
+		  </center>
+		  <input type="checkbox" value="ch">remeber me
+		   <center>
+          <input type="submit" id="submit" onclick="validateForm()" class="button" data-submit="modal">
+		  
+         </center>  
+        </div>
+        
+		 
+          </form>		 
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+<!-- Modal -->
+     <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">login</h4>
+        </div>
+        <div class="modal-body">
+         <center> <p>singin</p></center>
+		  <form name="myform" onsubmit="validate()">
+		  <center>
+		  <input type="email" placeholder="email" name="fname" id="email" class="input1" required><br>
+		  <input type="password" placeholder="new password" class="input1" required>
+		  <input type="password" placeholder="confarm password" class="input1" required><br>
+		  </center>
+		  <input type="checkbox" value="ch">remeber me
+		   
+		   <center>
+          <input type="submit" id="submit" onclick="validateForm()" class="button" data-submit="modal">
+		 </center>  
+        </form>		 
+        </div>
+		</div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img  src= "joker.jpg" alt="New York" width="100%" height="700px">
+        <div class="carousel-caption">
+         
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src= "ca.jpg" alt="Chicago" width="100%" height="700px">
+        <div class="carousel-caption">
+          
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="i.jpg" alt="Los Angeles" width="100%" height="100%">
+        <div class="carousel-caption">
+         
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container">
+     <div class="RE">
+	 <div class="er">
+	       <H4 class="hh">Recommended</H4>
+		   </div>
+           
+	        <input type="button" value="latest movies" class="button">
+	        <input type="button" value="trending" class="button">
+	        <input type="button" value="top IMDB" class="button">
+	     
+	 </div>
+     <div class="col-md-3 col-sm-6 col-xs-12">
+   <a href="movieopen.html"  target="_blank"><img width="200" height="300" src="v1.jpg"></a> 
+	 <p>captain america</p>
+	 <br>
+	 </div>
+	 <div class="col-md-3 col-sm-6 col-xs-12">
+	 <img width="200" height="300" src="v2.jpg" onclick="unn()";>
+	 <p>iron man</p>
+	 <br>
+	 </div>
+	 <div class="col-md-3 col-sm-6 col-xs-12">
+      <a href="movieopen.html"  target="_blank"><img  width="200" height="300" src="v3.jpg">
+	 <p>camtain</p>
+	 <br>
+	 </div>
+	  <div class="col-md-3 col-sm-6 col-xs-12">
+      <a href="movieopen1.html"  target="_blank"><img  width="200" height="300" src="v4.jpg">
+	 <p>sapider man</p>
+	 <br>
+	 </div>
+	  <div class="col-md-3 col-sm-6 col-xs-12">
+     <img  width="200" height="300" src= "v5.jpg" onmouseover="unn()";>
+	 <p>1937 Ford V8</p>
+	 <br>
+	 </div>
+	  <div class="col-md-3 col-sm-6 col-xs-12">
+     <img  width="200" height="300" src= "v6.jpg">
+	 <p>1933 Graham Blue Streak</p>
+	 <br>
+	 </div>
+	  <div class="col-md-3 col-sm-6 col-xs-12">
+     <img  width="200" height="300" src= "v7.jpg">
+	 <p>1933 Sunbeam</p>
+	 <br>
+	 </div>
+	  <div class="col-md-3 col-sm-6 col-xs-12">
+     <img  width="200" height="300" src= "v8.jpg">
+	 <p>1947 MG TC</p>
+	 <br>
+	 </div>
+	  <div class="col-md-3 col-sm-6 col-xs-12">
+     <img  width="200" height="300" src= "v9.jpg">
+	 <p onclick="my()">1982 Rolls Royce</p>
+	 <br>
+	 </div>
+	  <div class="col-md-3 col-sm-6 col-xs-12">
+     <img width="200" height="300" src= "v10.jpg">
+	 <p>1947 Lincoln</p>
+	 <br>
+	 </div>
+	  <div class="col-md-3 col-sm-6 col-xs-12">
+     <img width="200" height="300" src="v10.jfif" src= "v10.jfif">
+	 <p>Motilal Nehru’s 1928 Lanchester St. 8</p>
+	 <br>
+	 </div>
+	  <div class="col-md-3 col-sm-6 col-xs-12">
+     <img width="200" height="300" src= "v11.jfif">
+	 <p>Motilal Nehru’s 1928 Lanchester St.8</p>
+	 <br>
+	 </div>
+	 
+</div>
+<div class ="container">
+<div>
+     <h1 class="h11">There’s even more to watch.</h1>
+	<p class="h12" id="demo"> Netflix has an extensive library of feature films,
+	documentaries, TV shows, anime, award-winning Netflix originals and more.
+	Watch as much as you want, anytime you want.<p>
+	<div class="b">
+	<input type="button" value="join now" onclick="onfunction()" class="button">
+</div>
+	
+</div>
+</div>
+
+<footer>
+<hr class="new1">
+<div class="container">
+<div class="col-sm-3">
+<p class="pcl" style="color:#cda45e"><b>movie</b><p>
+<p style="color:#cda45e">online movies<p>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+	<hr class="new1"><p>web page by ssu<p>
+</div>
+<div class="col-sm-3">
+<p class="pcl"><b>service</b></p><p><br>download<br>watch<br>4k movies<br>web series<br></p>
+</div>
+<div class="col-sm-3">
+<p class="pcl"><b>information</b></p><p><br>secure<br>contact<br>privacy policy<br>terms of ruls<br></p>
+</div>
+<div class="col-sm-3">
+<p class="pcl"><b>adress</b></p><p><br>abc-cba<br>jr union 422134<br>999-777-111<br>tasty@email.com<br></p>
+</hr>
+</div>
+<center>
+</div>
+</div>
+</footer>
+
+
+</body>
+</html>
